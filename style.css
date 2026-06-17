@@ -1,27 +1,20 @@
-/* style.css */
-body { font-family: 'Segoe UI', sans-serif; background: #fdf6e3; color: #4a4a4a; margin: 0; }
+/* Design Premium estilo Imobiliária */
+body { font-family: 'Montserrat', sans-serif; margin: 0; background-color: #fcfbf7; color: #333; }
 
-.hero { 
-    background: linear-gradient(135deg, #eecfa1, #d4a373); 
-    padding: 60px 20px; 
-    text-align: center; 
-    color: white; 
-}
+.hero { height: 60vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-size: cover; display: flex; align-items: center; justify-content: center; text-align: center; color: white; }
 
-/* Efeito de interatividade: Aumenta ao passar o mouse */
-.card { 
-    background: white; 
-    padding: 30px; 
-    margin: 10px; 
-    transition: transform 0.3s ease; 
-    border-left: 5px solid #d4a373;
-}
-.card:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.container { padding: 50px 20px; }
 
-/* Carrossel simples (puxar para o lado) */
-.carousel-container { overflow-x: auto; white-space: nowrap; padding: 20px; }
-.carousel { display: inline-flex; }
-.card { display: inline-block; width: 300px; }
+/* Carrossel de Arraste */
+.carousel { display: flex; overflow-x: auto; gap: 20px; padding: 20px; scroll-snap-type: x mandatory; cursor: grab; }
+.carousel::-webkit-scrollbar { display: none; }
 
-.qr-box { text-align: center; margin-top: 50px; padding: 20px; }
-.qr-placeholder { width: 150px; height: 150px; background: #ddd; margin: auto; display: flex; align-items: center; justify-content: center; }
+/* Efeito de interatividade (Aumentar ao passar o mouse) */
+.card { min-width: 300px; padding: 40px; background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); scroll-snap-align: start; }
+.card:hover { transform: scale(1.08); box-shadow: 0 20px 40px rgba(0,0,0,0.2); border-bottom: 5px solid #d4a373; }
+
+.footer { padding: 50px; background: #2c3e50; color: white; text-align: center; }
+.qr-img { width: 120px; border: 5px solid white; border-radius: 10px; }
+
+h1 { font-size: 3rem; margin-bottom: 10px; }
+h2 { text-align: center; margin-bottom: 40px; font-weight: 300; }
