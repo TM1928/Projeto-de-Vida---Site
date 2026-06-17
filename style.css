@@ -1,34 +1,27 @@
-/* Crie um arquivo chamado style.css */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f4f9;
+/* style.css */
+body { font-family: 'Segoe UI', sans-serif; background: #fdf6e3; color: #4a4a4a; margin: 0; }
+
+.hero { 
+    background: linear-gradient(135deg, #eecfa1, #d4a373); 
+    padding: 60px 20px; 
+    text-align: center; 
+    color: white; 
 }
 
-header {
-    text-align: center;
-    padding: 20px;
-    background-color: #eecfa1; /* Tom próximo ao do PDF */
-    border-radius: 8px;
+/* Efeito de interatividade: Aumenta ao passar o mouse */
+.card { 
+    background: white; 
+    padding: 30px; 
+    margin: 10px; 
+    transition: transform 0.3s ease; 
+    border-left: 5px solid #d4a373;
 }
+.card:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
-section {
-    background: white;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
+/* Carrossel simples (puxar para o lado) */
+.carousel-container { overflow-x: auto; white-space: nowrap; padding: 20px; }
+.carousel { display: inline-flex; }
+.card { display: inline-block; width: 300px; }
 
-h1, h2 {
-    color: #333;
-}
-
-footer {
-    text-align: center;
-    margin-top: 40px;
-    font-style: italic;
-    color: #555;
-}
+.qr-box { text-align: center; margin-top: 50px; padding: 20px; }
+.qr-placeholder { width: 150px; height: 150px; background: #ddd; margin: auto; display: flex; align-items: center; justify-content: center; }
